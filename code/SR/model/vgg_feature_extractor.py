@@ -17,7 +17,7 @@ class VGGFeatureExtractor(nn.Module):
             # [0.229 * 2, 0.224 * 2, 0.225 * 2] if input in range [-1, 1]
             self.register_buffer('mean', mean)
             self.register_buffer('std', std)
-        #model = nn.DataParallel(model,device_ids=range(2))
+        model = nn.DataParallel(model,device_ids=range(1))
         model.to(device)
         #model.eval()
         if isinstance(feature_layer, list):

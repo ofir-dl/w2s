@@ -26,6 +26,7 @@ from model.SRFBN import SRFBN
 from model.SAN import SAN
 from model.RDN import RDN
 from model.RCAN import RCAN
+from model.mpncov import *
 
 parser = argparse.ArgumentParser(description="Train")
 parser.add_argument("--nEpochs", type=int, default=49, help="Number of training epochs")
