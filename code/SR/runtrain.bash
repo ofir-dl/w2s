@@ -1,4 +1,4 @@
-python train.py --net ours --lr_h5 ../../net_data/avg1_64_32.h5 --ngpu 2
+python train.py --net ours --lr_h5 ../../net_data/avg1_64_32.h5 --ngpu 1
 
 #python train.py --net RCAN --lr_h5 ../../net_data/avg400_64_32.h5 --ngpu 2
 #python train.py --net RDN --lr_h5 ../../net_data/avg400_64_32.h5 --ngpu 2

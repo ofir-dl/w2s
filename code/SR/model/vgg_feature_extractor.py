@@ -27,7 +27,7 @@ class VGGFeatureExtractor(nn.Module):
             previous_layer = 0
             for feature_ in feature_layer:
                 a = nn.Sequential(*list(model.features.children())[previous_layer:(feature_ + 1)])
-                a = nn.DataParallel(a, device_ids=range(2))
+                a = nn.DataParallel(a, device_ids=range(1))
                 a.to(device)
                 self.features.append(a)
                 previous_layer = feature_ + 1
